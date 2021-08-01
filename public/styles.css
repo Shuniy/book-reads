@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: monospace, "Fira Code", "Roboto Mono", source-code-pro, Menlo,
+    Monaco, Consolas, "Courier New", monospace;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Navbar */
+
+.navbar {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background-color: #485696;
+  font-size: 16px;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .container #search {
+  right: 0%;
+  padding-left: 2rem;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 1rem;
+  border: none;
+  background-color: #6679cc;
+  color: white;
+}
+
+.navbar #search {
+  outline: none;
+}
+
+.navbar #search::placeholder {
+  color: white;
+}
+
+/* Section */
+
+.App .section-title {
+  margin: 1rem;
+  border-bottom: 3px solid #485696;
+  /* border-top: 3px solid #6679cc; */
+  width: 100%;
+  text-align: center;
+}
+
+.section-title h1 {
+  color: #485696;
+}
+
+section .container .container.books {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.book {
+  height: 200px;
+  width: 150px;
+  background-color: #485696;
+  margin: 20px;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
