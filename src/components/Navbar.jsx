@@ -22,7 +22,7 @@ const Navbar = (props) => {
             type="search"
             name="search"
             id="search"
-            placeholder="...search"
+            placeholder="Search..."
           />
         </div>
       </nav>

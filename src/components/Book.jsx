@@ -1,21 +1,36 @@
 import React from "react";
+import BookShelfChanger from "./BookShelfChanger";
 
 function Book(props) {
+  const coverImage = `url(${
+    props.book.imageLinks
+      ? props.book.imageLinks.thumbnail
+      : "../icons/book-placeholder.svg"
+  })`;
   return (
-    <div
-      className="book"
-      style={{
-        backgroundImage: `url(${
-          props.book.imageLinks
-            ? props.book.imageLinks.thumbnail
-            : "../icons/book-placeholder.svg"
-        })`,
-      }}
-    >
-      {props.book.shelf}
-      {props.book.id}
-      {console.log(props.book)}
-    </div>
+    <li>
+      <div className="book">
+        <div className="book-top">
+          <div
+            className="book-cover"
+            style={{
+              backgroundImage: coverImage,
+            }}
+          />
+          <BookShelfChanger
+            book={props.book}
+            shelf={props.shelf}
+            moveBook={props.moveBook}
+          />
+        </div>
+        <div className="book-title">{props.book.title}</div>
+        <div className="book-authors">
+          {props.book.authors
+            ? props.book.authors.join(", ")
+            : "Unknown Author"}
+        </div>
+      </div>
+    </li>
   );
 }
 
