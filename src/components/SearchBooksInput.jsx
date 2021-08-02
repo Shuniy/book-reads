@@ -2,11 +2,12 @@ import React, {useState} from 'react'
 
 function SearchBooksInput(props) {
 
-    const [value, setValue] = useState('')
+    const [value, setValue] = useState(props.searchValue)
 
     function handleChange(event){
         const val = event.target.value
         setValue(val)
+        props.setSearchValue(val)
         props.onSearch(val)
     }
 

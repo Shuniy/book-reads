@@ -8,9 +8,8 @@ function SearchBooks(props) {
     <div className="search-books">
       <div className="search-books-bar">
         <Link to="/">
-          <button className="close-search" onClick={props.resetSearch}></button>
-        Close</Link>
-        <SearchBooksInput onSearch = {props.onSearch} />
+          <button className="close-search" onClick={props.resetSearch}></button></Link>
+        <SearchBooksInput onSearch = {props.onSearch} searchValue = {props.searchValue} setSearchValue = {props.setSearchValue} />
       </div>
       <SearchResults searchBooks = {props.searchBooks} myBooks = {props.myBooks} moveBook = {props.moveBook} />
     </div>

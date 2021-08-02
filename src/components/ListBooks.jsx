@@ -12,7 +12,7 @@ const bookShelves = [
 function ListBooks(props) {
   return (
     <div className="books">
-      <Navbar />
+      <Navbar setSearchValue = {props.setSearchValue} searchValue = {props.searchValue} />
       <div className="books-content">
         <div>
           {bookShelves.map((shelf, index) => (

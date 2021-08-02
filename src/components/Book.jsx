@@ -2,11 +2,7 @@ import React from "react";
 import BookShelfChanger from "./BookShelfChanger";
 
 function Book(props) {
-  const coverImage = `url(${
-    props.book.imageLinks
-      ? props.book.imageLinks.thumbnail
-      : "../icons/book-placeholder.svg"
-  })`;
+  const coverImage = `url(${props.book.imageLinks.thumbnail})`;
   return (
     <li>
       <div className="book">
