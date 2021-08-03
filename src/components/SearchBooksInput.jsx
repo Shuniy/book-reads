@@ -1,22 +1,26 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 function SearchBooksInput(props) {
+  const [value, setValue] = useState(props.searchValue);
 
-    const [value, setValue] = useState(props.searchValue)
+  function handleChange(event) {
+    const val = event.target.value;
+    setValue(val);
+    props.setSearchValue(val);
+    props.onSearch(val);
+  }
 
-    function handleChange(event){
-        const val = event.target.value
-        setValue(val)
-        props.setSearchValue(val)
-        props.onSearch(val)
-    }
-
-    return (
-        <div className='search-books-input-wrapper'>
-        <input type="text" value={value} placeholder='Search by title or author...' onChange={handleChange} autoFocus />
-            
-        </div>
-    )
+  return (
+    <div className="search-books-input-wrapper">
+      <input
+        type="text"
+        value={value}
+        placeholder="Search by title or author..."
+        onChange={handleChange}
+        autoFocus
+      />
+    </div>
+  );
 }
 
-export default SearchBooksInput
+export default SearchBooksInput;

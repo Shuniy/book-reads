@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-import BookSection from "./BookSection"; 
+import BookSection from "./BookSection";
 
 const bookShelves = [
   { shelf: "currentlyReading", name: "Currently Reading" },
@@ -12,7 +12,10 @@ const bookShelves = [
 function ListBooks(props) {
   return (
     <div className="books">
-      <Navbar setSearchValue = {props.setSearchValue} searchValue = {props.searchValue} />
+      <Navbar
+        setSearchValue={props.setSearchValue}
+        searchValue={props.searchValue}
+      />
       <div className="books-content">
         <div>
           {bookShelves.map((shelf, index) => (

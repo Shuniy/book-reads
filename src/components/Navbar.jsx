@@ -2,16 +2,14 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 
 const Navbar = (props) => {
-
-  function handleChange(event){
-    const value = event.target.value
-    props.setSearchValue(value)
-
+  function handleChange(event) {
+    const value = event.target.value;
+    props.setSearchValue(value);
   }
 
-  function handleSubmit(event){
+  function handleSubmit(event) {
     event.preventDefault();
-    <Redirect to='/search' />
+    <Redirect to="/search" />;
   }
 
   return (

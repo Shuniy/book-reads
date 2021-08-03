@@ -9,7 +9,7 @@ class App extends Component {
     myBooks: [],
     searchBooks: [],
     error: false,
-    searchValue:''
+    searchValue: "",
   };
 
   // Loading Books as the Component Mounting
@@ -26,8 +26,8 @@ class App extends Component {
   };
 
   setSearchValue = (value) => {
-    this.setState({searchValue : value})
-  }
+    this.setState({ searchValue: value });
+  };
 
   moveBook = (book, shelf) => {
     BooksAPI.update(book, shelf).catch((err) => {
@@ -61,7 +61,7 @@ class App extends Component {
   };
 
   resetSearch = () => {
-    this.setState({ searchBooks: [], searchValue : '' });
+    this.setState({ searchBooks: [], searchValue: "" });
   };
 
   render() {
@@ -70,14 +70,16 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <ListBooks moveBook={this.moveBook} books={this.state.myBooks} setSearchValue = {this.setSearchValue}
-              searchValue = {this.state.searchValue} />
         <Route
           exact
           path="/"
           render={() => {
-            <ListBooks moveBook={this.moveBook} books={this.state.myBooks} setSearchValue = {this.setSearchValue}
-              searchValue = {this.state.searchValue} />;
+            <ListBooks
+              moveBook={this.moveBook}
+              books={this.state.myBooks}
+              setSearchValue={this.setSearchValue}
+              searchValue={this.state.searchValue}
+            />;
           }}
         />
 
@@ -90,8 +92,8 @@ class App extends Component {
               onSearch={this.searchForBooks}
               moveBook={this.moveBook}
               resetSearch={this.resetSearch}
-              setSearchValue = {this.setSearchValue}
-              searchValue = {this.state.searchValue}
+              setSearchValue={this.setSearchValue}
+              searchValue={this.state.searchValue}
             />
           )}
         />
