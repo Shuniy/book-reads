@@ -73,16 +73,15 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => {
+          render={() => (
             <ListBooks
               moveBook={this.moveBook}
               books={this.state.myBooks}
               setSearchValue={this.setSearchValue}
               searchValue={this.state.searchValue}
-            />;
-          }}
+            />
+          )}
         />
-
         <Route
           path="/search"
           render={() => (
