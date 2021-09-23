@@ -15,3 +15,15 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ***Check the Deployed App [Here.](https://read-books-react.herokuapp.com/)***
+
+## Screenshots
+
+### Start Page
+![homepage](images/startpage.jpeg)
+
+### Search Books
+![searchbooks](images/searchbooks.jpeg)
+
+### Moved books to different status or sections
+
+![changingstate](images/changedstates.jpeg)
